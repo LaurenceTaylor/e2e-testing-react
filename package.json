@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel index.html",
     "unit": "jest test/**/*.spec.js",
-    "e2e": "cypress open"
+    "e2e": "cypress open",
+    "lint": "eslint cypress/integration/**/*.js src/**/*.js test/**/*.js"
   },
   "author": "Laurence Taylor",
   "license": "ISC",
@@ -16,10 +17,16 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "cypress": "^3.4.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.3.0",
+    "eslint-config-codingitwrong": "^0.1.4",
+    "eslint-plugin-cypress": "^2.6.1",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-react": "^7.14.3",
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.3"
   },
