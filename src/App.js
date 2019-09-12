@@ -2,6 +2,6 @@ import React from "react";
 
 export default class App extends React.Component {
   render() {
-    return <div className="hello">Hello, world</div>;
+    return <div className="hello">Hello, world!</div>;
   }
 }

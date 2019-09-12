@@ -11,12 +11,25 @@
   "author": "Laurence Taylor",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
     "cypress": "^3.4.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>test/setup.js"
+    ]
   }
 }

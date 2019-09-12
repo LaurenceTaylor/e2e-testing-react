@@ -30655,7 +30655,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "hello"
-      }, "Hello, world");
+      }, "Hello, world!");
     }
   }]);
 
