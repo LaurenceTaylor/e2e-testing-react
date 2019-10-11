@@ -30897,7 +30897,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "hello"
-      }, "Hello, world!", _react.default.createElement(_RestaurantListPage.default, null));
+      }, _react.default.createElement(_RestaurantListPage.default, null));
     }
   }]);
 
@@ -30947,7 +30947,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53649" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53061" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
