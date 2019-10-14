@@ -30714,6 +30714,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var RestaurantList = function RestaurantList(_ref) {
   var restaurantNames = _ref.restaurantNames;
+  return _react.default.createElement(RestaurantItems, {
+    restaurantNames: restaurantNames
+  });
+};
+
+var RestaurantItems = function RestaurantItems(_ref2) {
+  var restaurantNames = _ref2.restaurantNames;
+  return restaurantNames.length === 0 ? _react.default.createElement(NoRestaurantItems, null) : _react.default.createElement(SomeRestaurantItems, {
+    restaurantNames: restaurantNames
+  });
+};
+
+var NoRestaurantItems = function NoRestaurantItems() {
+  return _react.default.createElement("p", null, "(none added yet)");
+};
+
+var SomeRestaurantItems = function SomeRestaurantItems(_ref3) {
+  var restaurantNames = _ref3.restaurantNames;
   return _react.default.createElement("ul", null, restaurantNames.map(function (restaurantName) {
     return _react.default.createElement("li", {
       key: restaurantName
