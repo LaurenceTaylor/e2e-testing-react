@@ -19,8 +19,14 @@ export default class RestaurantListPage extends Component {
     }));
   };
 
+  renderNewRestaurantForm() {
+    if (this.state.showNewRestaurantForm) {
+      return <NewRestaurantForm onSave={this.handleAddRestaurant} />;
+    }
+  }
+
   render() {
-    const { restaurantNames, showNewRestaurantForm } = this.state;
+    const { restaurantNames } = this.state;
     return (
       <div>
         <button
@@ -29,9 +35,7 @@ export default class RestaurantListPage extends Component {
         >
           Add Restaurant
         </button>
-        {showNewRestaurantForm ? (
-          <NewRestaurantForm onSave={this.handleAddRestaurant} />
-        ) : null}
+        {this.renderNewRestaurantForm()}
         <RestaurantList restaurantNames={restaurantNames} />
       </div>
     );

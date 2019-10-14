@@ -30813,17 +30813,22 @@ function (_Component) {
   }
 
   _createClass(RestaurantListPage, [{
+    key: "renderNewRestaurantForm",
+    value: function renderNewRestaurantForm() {
+      if (this.state.showNewRestaurantForm) {
+        return _react.default.createElement(_NewRestaurantForm.default, {
+          onSave: this.handleAddRestaurant
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this$state = this.state,
-          restaurantNames = _this$state.restaurantNames,
-          showNewRestaurantForm = _this$state.showNewRestaurantForm;
+      var restaurantNames = this.state.restaurantNames;
       return _react.default.createElement("div", null, _react.default.createElement("button", {
         "data-test": "addRestaurantButton",
         onClick: this.handleShowNewRestaurantForm
-      }, "Add Restaurant"), showNewRestaurantForm ? _react.default.createElement(_NewRestaurantForm.default, {
-        onSave: this.handleAddRestaurant
-      }) : null, _react.default.createElement(_RestaurantList.default, {
+      }, "Add Restaurant"), this.renderNewRestaurantForm(), _react.default.createElement(_RestaurantList.default, {
         restaurantNames: restaurantNames
       }));
     }
@@ -30947,7 +30952,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53061" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51920" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
